@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Список Фильмов</string>
+    <string name="repeat">Повторить</string>
+    <string name="loading_error">Ошибка загрузки</string>
+</resources>

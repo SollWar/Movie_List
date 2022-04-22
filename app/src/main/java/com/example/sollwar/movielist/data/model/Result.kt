@@ -1,4 +1,4 @@
-package com.example.sollwar.movielist.network.model
+package com.example.sollwar.movielist.data.model
 
 data class Result(
     val byline: String,

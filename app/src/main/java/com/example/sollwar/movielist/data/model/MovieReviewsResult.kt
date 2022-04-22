@@ -1,4 +1,4 @@
-package com.example.sollwar.movielist.network.model
+package com.example.sollwar.movielist.data.model
 
 data class MovieReviewsResult(
     val copyright: String,

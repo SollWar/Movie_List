@@ -1,8 +1,7 @@
-package com.example.sollwar.movielist.network.retrofit
+package com.example.sollwar.movielist.data.retrofit
 
-import android.util.Log
-import com.example.sollwar.movielist.network.model.MovieReviewsResult
-import retrofit2.Call
+import com.example.sollwar.movielist.BuildConfig
+import com.example.sollwar.movielist.data.model.MovieReviewsResult
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -12,7 +11,7 @@ import retrofit2.http.Query
 interface MovieReviewsAPI {
     @GET("svc/movies/v2/reviews/all.json")
     suspend fun getMovieList(
-        @Query("api-key") api_key: String = "l7A3Gt1KcO60OlMl6TbeWSGgdblDftao",
+        @Query("api-key") api_key: String = BuildConfig.API_KEY,
         @Query("offset") offset: Int = 0
     ) : Response<MovieReviewsResult>
 
