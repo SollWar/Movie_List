@@ -14,7 +14,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val intent = Intent(this, MainActivity::class.java)
         lifecycleScope.launch {
-            delay(500)
+            delay(1000)
             startActivity(intent)
             finish()
         }
