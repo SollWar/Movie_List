@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.Flow
 
 class MainViewModel() : ViewModel() {
     private val movieRepository: MovieRepository = MovieRepository()
+
     val movieFlow: Flow<PagingData<Result>> = movieRepository.getPagedMovie()
 
 }

@@ -16,15 +16,13 @@ class MoviePagingSource(
 
         return try {
             val movies = loader.invoke(pageIndex * 20)
-
-            Log.d("RetrofitSuccess", movies.toString())
-
             return LoadResult.Page(
                 data = movies,
                 prevKey = if (pageIndex == 0) null else pageIndex - 1,
                 nextKey = if (hasMore) pageIndex + 1 else null
             )
         } catch (e: Exception) {
+            Log.d("loadStateFlow", "Ошибка")
             LoadResult.Error(
                 throwable = e
             )
